@@ -3,25 +3,27 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+     
+      <h2>Архитектура React</h2>
+
+      <img src="react.png" className="App-logo" />
+
+      <h2>Hello, React!</h2>
+
+      <div className='mainInfo'>
+        <p>ФИО: Смольянинов Олег Викторович</p>
+        <p>Тел.: 8-961-035-34-41</p>
+        <p>Почта: oleg__smol@mail.ru</p>
+      </div>
+
+      <div className='mainSity'>
+        <p>Город: Липецк</p>
+        <p>Число жителей: 496,45тыс.</p>
+        <img src="Flag_of_Lipetsk.png" className="App-logo" />
+        <p>Страна: Россия</p>
+        <img src="fladRF.png" className="App-logo" />
+      </div>
+
     </div>
   );
 }
