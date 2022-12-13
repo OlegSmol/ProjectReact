@@ -1,31 +1,57 @@
 import './App.css';
+import { Biblio } from './component/Biblio';
+import { Sity } from './component2/Sity'
+import { Sity1 } from './component2/Sity1'
+import { Sity2 } from './component2/Sity2'
+import { SityFoto } from './component2/SityFoto'
+
+import { Link, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-     
-      <h2>Архитектура React</h2>
+    <div class="App">
+      {/* <h2>Шекспир</h2>
+      <Biblio></Biblio> */}
 
-      <img src="react.png" className="App-logo" />
+      <nav>
+        <Link to="/Sity">Город</Link>
+        <Link to="/Sity1">Достопримечательность</Link>
+        <Link to="/Sity2">Другие достопримечательности</Link>
+        <Link to="/SityFoto">Фото</Link>
+      </nav>
 
-      <h2>Hello, React!</h2>
+      <main>
+        <Routes>
+          <Route
+            path='/Sity'
+            element={<Sity></Sity>}
+          />
 
-      <div className='mainInfo'>
-        <p>ФИО: Смольянинов Олег Викторович</p>
-        <p>Тел.: 8-961-035-34-41</p>
-        <p>Почта: oleg__smol@mail.ru</p>
-      </div>
+          <Route
+            path='/Sity1'
+            element={<Sity1></Sity1>}
+          />
 
-      <div className='mainSity'>
-        <p>Город: Липецк</p>
-        <p>Число жителей: 496,45тыс.</p>
-        <img src="Flag_of_Lipetsk.png" className="App-logo" />
-        <p>Страна: Россия</p>
-        <img src="fladRF.png" className="App-logo" />
-      </div>
+          <Route
+            path='/Sity2'
+            element={<Sity2></Sity2>}
+          />
+
+          <Route
+            path='/SityFoto'
+            element={<SityFoto></SityFoto>}
+          />
+
+        </Routes>
+      </main>
+
 
     </div>
+
+
   );
 }
+
+
 
 export default App;
